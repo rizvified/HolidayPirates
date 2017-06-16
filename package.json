@@ -7,10 +7,12 @@
   "author": "Ahsan Abbas <rizvified@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node server",
     "build": "webpack --progress --colors"
   },
   "dependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.16.2",
+    "express": "^4.15.3"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
