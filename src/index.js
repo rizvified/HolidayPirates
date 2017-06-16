@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { hotelBox } from './template';
+import { hotelBox, errorBox } from './template';
 
 
 $('.load_hotels').on('click', function(e) {
   e.preventDefault();
-  getHotels();
+  _getHotels();
 });
 
-const getHotels = () => {
+const _getHotels = () => {
   axios.get('http://fake-hotel-api.herokuapp.com/api/hotels?count=5')
   .then(function (response) {
     const hotels = response.data.map((hotel, index) =>{
@@ -29,6 +29,7 @@ const getHotels = () => {
     });
   })
   .catch(function (error) {
-   console.log(error);
+    const alert = errorBox(error);
+    $( ".hotel_list" ).append(alert);
  });
 }

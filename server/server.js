@@ -9,7 +9,6 @@ module.exports = {
 
     app.use('/dist', publicPath);
     app.get('/', (_, res) => { res.sendFile(indexPath); });
-    // app.get('*', (_, res) => { res.sendFile(indexPath); });
 
     return app;
   },

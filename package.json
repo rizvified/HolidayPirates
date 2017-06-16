@@ -7,7 +7,7 @@
   "author": "Ahsan Abbas <rizvified@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server",
+    "start": "yarn build && node server",
     "build": "webpack --progress --colors"
   },
   "dependencies": {

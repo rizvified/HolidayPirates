@@ -1,2 +1,2 @@
 # HolidayPirates
-coding challenge for HolidayPirates GmbH
+Coding challenge for HolidayPirates GmbH
