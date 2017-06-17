@@ -2,10 +2,10 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
   return `
     <div class="row">
       <div class="hotel ${id}">
-        <div class="col-md-4 hotel_image">
+          <div class="col-md-4 hotel_image">
           <img src="${images[0]}" class="img-responsive" alt="hotel"  />
-        </div>
-        <div1 class="col-md-8 hotel_details">
+          </div>
+          <div1 class="col-md-8 hotel_details">
           <div class="row">
             <div class="col-md-7">
               <div class="row">
@@ -34,7 +34,7 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
           </div>
           <div class="row">
             <div class="col-md-5">
-              <button type="button" class="btn btn-primary show_reviews">Load Reviews</button>
+              <button type="button" class="btn btn-primary load_reviews" data-toggle="collapse" data-target="#reviews">Load Reviews</button>
             </div>
             <div class="col-md-7">
               <div class="row">
@@ -47,6 +47,30 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
                   ${date_start} - ${date_end}
                 </div>
               </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+    `
+};
+
+const reviews = (name, comment, positive) => {
+  return `
+    <div id="reviews" class="col-md-12 collapse">
+      <div class="row">
+        <div class="col-md-3">
+          ${positive}
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-12">
+              ${name}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              ${comment}
             </div>
           </div>
         </div>

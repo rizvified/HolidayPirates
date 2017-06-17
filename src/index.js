@@ -6,6 +6,11 @@ $('.load_hotels').on('click', function(e) {
   _getHotels();
 });
 
+$('.load_reviews').on('click', function(e) {
+  e.preventDefault();
+  _getReviews();
+});
+
 const _getHotels = () => {
   if($('.api_error') !== null) $('.api_error').remove();
   axios.get('http://fake-hotel-api.herokuapp.com/api/hotels?count=5')
