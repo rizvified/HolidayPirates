@@ -1,4 +1,4 @@
-body {
+main {
   margin: 30px 0;
 }
 
@@ -7,6 +7,14 @@ body {
     margin: 0 auto;
 }
 
+.hotel_getter {
+  padding-top: 20px;
+}
+
 .hotel_list {
-  margin: 15px 0;
+  margin: 30px 0;
+}
+
+.hotel {
+  margin: 20px 0;
 }
