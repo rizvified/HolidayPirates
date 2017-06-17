@@ -1,7 +1,7 @@
 const hotelBox = (id, name, description, date_start, date_end, price, rating, stars, city, country, images) => {
   return `
     <div class="row">
-      <div class="hotel ${id}">
+      <div class="hotel" id="hotel_${id}">
           <div class="col-md-4 hotel_image">
           <img src="${images[0]}" class="img-responsive" alt="hotel"  />
           </div>
@@ -34,7 +34,7 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
           </div>
           <div class="row">
             <div class="col-md-5">
-              <button type="button" class="btn btn-primary load_reviews" data-toggle="collapse" data-target="#reviews">Load Reviews</button>
+              <button type="button" class="btn btn-primary load_reviews" data-toggle="collapse" data-hotel-id="${id}" data-target="review_${id}">Load Reviews</button>
             </div>
             <div class="col-md-7">
               <div class="row">
@@ -50,14 +50,15 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
             </div>
           </div>
           </div>
+          <div id="review_${id}" class="col-md-12">
+          </div>
       </div>
     </div>
     `
 };
 
-const reviews = (name, comment, positive) => {
+const reviewBox = (name, comment, positive) => {
   return `
-    <div id="reviews" class="col-md-12 collapse">
       <div class="row">
         <div class="col-md-3">
           ${positive}
@@ -75,7 +76,6 @@ const reviews = (name, comment, positive) => {
           </div>
         </div>
       </div>
-    </div>
     `
 };
 
@@ -90,5 +90,6 @@ const errorBox = () => {
 
 export {
   hotelBox,
-  errorBox
+  errorBox,
+  reviewBox
 }
