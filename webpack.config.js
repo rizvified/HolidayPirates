@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'script.js',
+    publicPath: '/dist/',
   },
 
   plugins: [
@@ -28,8 +29,7 @@ module.exports = {
         include: path.join(__dirname, 'src')
       },
       {
-       test: /\.scss$/,
-       include: path.join(__dirname, 'src', 'styles'),
+       test: /\.scss?$/,
        use: ExtractTextPlugin.extract({
          fallback: 'style-loader',
          use: ['css-loader', 'sass-loader']
