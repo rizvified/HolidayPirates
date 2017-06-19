@@ -53,7 +53,7 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
           </div>
           <div class="row">
             <div class="col-md-5">
-              <button type="button" class="btn btn-primary load_reviews" data-toggle="collapse" data-hotel-id="${id}" data-target="review_${id}">Load Reviews</button>
+              <button type="button" class="btn btn-primary load_reviews" data-toggle="collapse" data-hotel-id="${id}">Load Reviews</button>
             </div>
             <div class="col-md-7">
               <div class="row">
@@ -73,7 +73,7 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
             </div>
           </div>
           </div>
-          <div id="review_${id}" class="collapse col-md-12">
+          <div id="review_${id}" class="reviewBox collapse col-md-12">
           </div>
       </div>
     </div>
