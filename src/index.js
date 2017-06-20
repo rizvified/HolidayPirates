@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { hotelBox, errorBox, reviewBox } from './templates';
-import sass from './main.scss'
 
 // method for fetching hotels
 const _getHotels = () => {
@@ -44,19 +43,20 @@ const _getHotels = () => {
  })
 };
 
+// method for checking last index
+const isLast = (index, len) => true ? len -1 == index : false;
+
 // method for fetching reviews
 const _getReviews = id => {
   axios.get(`https://fake-hotel-api.herokuapp.com/api/reviews?hotel_id=${id}`)
   .then(response => {
-      const marker = response.data.length-1;
       const reviews = response.data.reduce((list, review, index) => {
         const {
           name,
           comment,
           positive
         } = review;
-        const last_review = true ? marker == index : false;
-        list += reviewBox(name, comment, positive, last_review);
+        list += reviewBox(name, comment, positive, isLast(index, response.data.length));
         return list;
       }, '')
       console.log(reviews);;

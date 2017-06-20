@@ -53,26 +53,28 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
                   </p>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-5 ">
-                  <button type="button" class="btn btn-default load_reviews" data-toggle="collapse" id="loader_${id}" data-hotel-id="${id}">Show Reviews</button>
-                </div>
-                <div class="col-md-7 ">
-                  <div class="row">
-                    <div class="col-md-12 ">
-                      <h3 class="h_price pull-right">
-                        ${price}&nbsp;&euro;
-                      </h3>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 ">
-                      <span class="h_dates pull-right">
-                        ${starting_date}&nbsp;-&nbsp;${ending_date}
-                      </span>
-                    </div>
+            </div>
+            <div class="hotel_details">
+            <div class="row">
+              <div class="col-md-5 ">
+                <button type="button" class="btn btn-default load_reviews" data-toggle="collapse" id="loader_${id}" data-hotel-id="${id}">Show Reviews</button>
+              </div>
+              <div class="col-md-7 ">
+                <div class="row">
+                  <div class="col-md-12 ">
+                    <h3 class="h_price pull-right">
+                      ${price}&nbsp;&euro;
+                    </h3>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-md-12 ">
+                    <span class="h_dates pull-right">
+                      ${starting_date}&nbsp;-&nbsp;${ending_date}
+                    </span>
+                  </div>
+                </div>
+              </div>
               </div>
             </div>
             </div>
