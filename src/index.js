@@ -5,7 +5,7 @@ import sass from './main.scss'
 // method for fetching hotels
 const _getHotels = () => {
   if($('.api_error') !== null) $('.api_error').remove();
-  axios.get('http://fake-hotel-api.herokuapp.com/api/hotels?count=5')
+  axios.get('https://fake-hotel-api.herokuapp.com/api/hotels?count=5')
   .then(response => {
     const hotels = response.data.reduce((list, hotel) => {
       const {
@@ -46,7 +46,7 @@ const _getHotels = () => {
 
 // method for fetching reviews
 const _getReviews = id => {
-  axios.get(`http://fake-hotel-api.herokuapp.com/api/reviews?hotel_id=${id}`)
+  axios.get(`https://fake-hotel-api.herokuapp.com/api/reviews?hotel_id=${id}`)
   .then(response => {
       const marker = response.data.length-1;
       const reviews = response.data.reduce((list, review, index) => {
