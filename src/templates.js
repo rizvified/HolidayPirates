@@ -86,8 +86,7 @@ const hotelBox = (id, name, description, date_start, date_end, price, rating, st
 
 const reviewBox = (name, comment, positive, last_review) => {
   const type = positive ? '<i class="fa fa-plus-circle positive"></i>' : '<i class="fa fa-minus-circle negative"></i>'
-  const gap =  last_review == true ? '' : '<hr>'
-  console.log(gap, 'review');
+  const separator =  last_review == true ? '' : '<hr>'
   return `
       <div class="row">
         <div class="col-md-1">
@@ -113,7 +112,7 @@ const reviewBox = (name, comment, positive, last_review) => {
           </div>
         </div>
       </div>
-      ${gap}
+      ${separator}
     `
 };
 

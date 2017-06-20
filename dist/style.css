@@ -31,8 +31,9 @@ body {
           height: 234px;
           position: relative; }
         body main .hotel_list .hotelBox .hotel_details {
-          position: relative;
-          padding: 20px; }
+          position: absolute;
+          padding: 20px;
+          height: 234px; }
           body main .hotel_list .hotelBox .hotel_details .h_rating {
             font-size: 24px; }
             body main .hotel_list .hotelBox .hotel_details .h_rating .fa-star {

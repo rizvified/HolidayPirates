@@ -56,10 +56,10 @@ const _getReviews = id => {
           positive
         } = review;
         const last_review = true ? marker == index : false;
-        console.log(last_review, 'getReview');
         list += reviewBox(name, comment, positive, last_review);
         return list;
       }, '')
+      console.log(reviews);;
       $(`#review_${id}`).html(reviews);
       $(`#review_${id}`).collapse('show');
   })
