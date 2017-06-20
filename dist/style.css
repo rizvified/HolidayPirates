@@ -1,17 +1,71 @@
-main {
-  margin: 30px 0; }
+.no-pad {
+  padding: 0 !important; }
 
-.load_hotels {
-  display: block;
-  margin: 0 auto; }
+.positive {
+  color: #02b875; }
 
-.hotel_getter {
-  padding-top: 20px; }
+.negative {
+  color: #FF4943; }
 
-.hotel_list {
-  margin: 30px 0; }
-
-.hotel {
-  margin: 20px 0; }
+body {
+  background-color: #d6d6d6; }
+  body main {
+    margin: 30px 0; }
+    body main .load_hotels {
+      padding-top: 5%; }
+      body main .load_hotels .h_loader {
+        background-color: #02b875;
+        color: #fff;
+        display: block;
+        margin: 0 auto;
+        padding: 2% 6%; }
+    body main .hotel_list {
+      padding-top: 5%; }
+      body main .hotel_list .hotelBox {
+        background-color: #e7e7e7;
+        position: relative;
+        display: inline-block;
+        margin: 1% 10%;
+        width: 936px; }
+        body main .hotel_list .hotelBox .hotel_image {
+          height: 234px;
+          position: relative; }
+        body main .hotel_list .hotelBox .hotel_details {
+          position: relative;
+          padding: 20px; }
+          body main .hotel_list .hotelBox .hotel_details .h_rating {
+            font-size: 24px; }
+            body main .hotel_list .hotelBox .hotel_details .h_rating .fa-star {
+              color: #FFBF64; }
+          body main .hotel_list .hotelBox .hotel_details .h_name {
+            margin: 0;
+            text-transform: capitalize; }
+          body main .hotel_list .hotelBox .hotel_details .h_description {
+            font-size: 13px;
+            margin: 10px 0; }
+          body main .hotel_list .hotelBox .hotel_details .h_price {
+            margin-top: 10px;
+            margin-bottom: 0; }
+          body main .hotel_list .hotelBox .hotel_details .load_reviews {
+            background-color: #2196F3;
+            color: #fff;
+            margin-top: 10px; }
+        body main .hotel_list .hotelBox .reviewBox {
+          background-color: #c5c5c5;
+          border-top: 1px solid #BFCCB8;
+          position: relative;
+          padding: 2% 2%; }
+          body main .hotel_list .hotelBox .reviewBox .c_type {
+            font-size: 34px; }
+          body main .hotel_list .hotelBox .reviewBox .commenter {
+            font-size: 20px;
+            font-weight: bold; }
+          body main .hotel_list .hotelBox .reviewBox .comment {
+            font-size: 13px;
+            padding-top: 5px; }
+      body main .hotel_list .errorBox {
+        background-color: #FF4943;
+        color: #fff;
+        border-color: #FF4943; }
 
 /*# sourceMappingURL=style.css.map*/
