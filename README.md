@@ -1,7 +1,3 @@
-# HolidayPirates
-
-Coding challenge for HolidayPirates GmbH
-
 ## Quick start
 
 1. Run `yarn` to install dependencies
