@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { hotelBox, errorBox, reviewBox } from './templates';
 
+import style from './main.scss'
+
 // method for fetching hotels
 const _getHotels = () => {
   if($('.api_error') !== null) $('.api_error').remove();
